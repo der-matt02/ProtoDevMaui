@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProtoDevMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProtoDevMaui"
+    Shell.FlyoutBehavior="Disabled"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:views="clr-namespace:ProtoDevMaui.Views"
+    Shell.TabBarBackgroundColor="{StaticResource Primary}"
+    Shell.TabBarTitleColor="{StaticResource White}"
+    Shell.TabBarForegroundColor="{StaticResource White}"
+    Shell.BackgroundColor="{StaticResource Black}"
+    
+    Title="ProtoDevMaui">
+
+    <Shell.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}" />
+    </Shell.Behaviors>
+
+    <!--<ShellContent
+        Title="ProtoDev"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" /> -->
+
+    <TabBar>
+        <ShellContent Title="Inicio"
+                      Icon="home"
+                      ContentTemplate="{DataTemplate views:HomePage}"
+                      Route="HomePage"/>
+        <ShellContent Title="Categorías"
+                Icon="categories"
+                ContentTemplate="{DataTemplate views:CategoriesPage}"
+                Route="CategoriesPage"/>
+        <ShellContent Title="Ordenes"
+                Icon="orders"
+                ContentTemplate="{DataTemplate views:OrdersPage}"
+                Route="OrdersPage"/>
+        <ShellContent Title="Perfil"
+                Icon="user"
+                ContentTemplate="{DataTemplate views:ProfilePage}"
+                Route="ProfilePage"/>    
+
+    </TabBar>
+
+</Shell>
